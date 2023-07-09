@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/jygei/Documents/GitHub/ktanemod-thirdbase/Assets/scene.unity
+- path: Assets/New Scene.unity
   isLoaded: 1
   isActive: 1

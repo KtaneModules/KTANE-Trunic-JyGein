@@ -18,7 +18,8 @@ public class Trunic : KtaneModule {
 
     public KMBombInfo Bomb;
     public KMAudio Audio;
-    public KMBombModule Module  ;
+    public KMBombModule Module;
+    public TextMesh testText;
 
     string ModuleName;
     static int ModuleIdCounter = 1;
@@ -47,7 +48,7 @@ public class Trunic : KtaneModule {
     }
 
     new void Start () { //Shit
-        
+        testText.text = "-ie";
     }
 
     new void Update () { //Shit that happens at any point after initialization
