@@ -19,17 +19,34 @@ public class Trunic : KtaneModule {
     public KMBombInfo Bomb;
     public KMAudio Audio;
     public KMBombModule Module;
-    public TextMesh testText;
+    public MeshRenderer Display;
+    public Texture[] trunicTextures;
 
     string ModuleName;
     static int ModuleIdCounter = 1;
     int ModuleId;
     private bool ModuleSolved;
+    private Material _displayText;
+    private Texture DisplayText {
+        get { return _displayText.mainTexture; } 
+        set {
+            _displayText.mainTexture = value;
+            Display.transform.localScale = new Vector3(value.width/1134*0.0001261897f, Display.transform.localScale.y, Display.transform.localScale.z);
+        }
+    }
+    private int displayNumber;
+    //3 0.0003351862
+    //2 0.0002381024
+    //1 0.0001370526
 
     new void Awake () { //Shit that happens before Start
         ModuleName = Module.ModuleDisplayName;
         ModuleId = ModuleIdCounter++;
         GetComponent<KMBombModule>().OnActivate += Activate;
+        _displayText = Display.material;
+        displayNumber = 6;//Rnd.Range(0, trunicTextures.Length);
+        DisplayText = trunicTextures[displayNumber];
+        Log(trunicTextures[displayNumber].name);
         /*
          * How to make buttons work:
          * 
@@ -48,7 +65,7 @@ public class Trunic : KtaneModule {
     }
 
     new void Start () { //Shit
-        testText.text = "-ie";
+
     }
 
     new void Update () { //Shit that happens at any point after initialization
