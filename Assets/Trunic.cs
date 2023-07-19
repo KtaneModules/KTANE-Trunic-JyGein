@@ -20,7 +20,11 @@ public class Trunic : KtaneModule {
     public KMAudio Audio;
     public KMBombModule Module;
     public MeshRenderer Display;
-    public Texture[] trunicTextures;
+    public Texture[] trunicButtonTextTextures;
+    public Texture[] trunicDisplayTextTextures;
+    public MeshRenderer[] Buttons;
+    public MeshRenderer[] StageLEDS;
+    public Texture[] LEDLights;
 
     string ModuleName;
     static int ModuleIdCounter = 1;
@@ -31,10 +35,26 @@ public class Trunic : KtaneModule {
         get { return _displayText.mainTexture; } 
         set {
             _displayText.mainTexture = value;
-            Display.transform.localScale = new Vector3(value.width/1134*0.0001261897f, Display.transform.localScale.y, Display.transform.localScale.z);
+            Display.transform.localScale = new Vector3(value.width/1134f*0.0001261897f, Display.transform.localScale.y, Display.transform.localScale.z);
         }
     }
     private int displayNumber;
+    private Material[] _buttonTexts;
+    private Texture[] ButtonTexts {
+        get {
+            Texture[] temp = new Texture[_buttonTexts.Length];
+            for(int i = 0; i<_buttonTexts.Length; i++) {
+                temp[i] = _buttonTexts[i].mainTexture;
+            }
+            return temp;
+        }
+        set {
+            Texture[] temp = new Texture[_buttonTexts.Length];
+            for(int i = 0; i<_buttonTexts.Length; i++) {
+                temp[i] = value[i].
+            }
+        }
+    }
     //3 0.0003351862
     //2 0.0002381024
     //1 0.0001370526
@@ -44,9 +64,13 @@ public class Trunic : KtaneModule {
         ModuleId = ModuleIdCounter++;
         GetComponent<KMBombModule>().OnActivate += Activate;
         _displayText = Display.material;
-        displayNumber = 6;//Rnd.Range(0, trunicTextures.Length);
-        DisplayText = trunicTextures[displayNumber];
-        Log(trunicTextures[displayNumber].name);
+        _buttonTexts = new Material[Buttons.Length];
+        for(int i=0; i<Buttons.Length; i++) {
+            _buttonTexts[i] = Buttons[i].material;
+        }
+        displayNumber = Rnd.Range(0, trunicDisplayTextTextures.Length);
+        DisplayText = trunicDisplayTextTextures[displayNumber];
+        Log(trunicDisplayTextTextures[displayNumber].name);
         /*
          * How to make buttons work:
          * 
