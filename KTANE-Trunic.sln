@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KtaneMod", "KtaneMod.csproj", "{CBF994F5-0760-F741-D2E5-A6FDF1B0181B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trunic", "trunic.csproj", "{4DDDE1FD-91F8-9296-B619-2D68F85EACB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KtaneMod-Editor", "KtaneMod-Editor.csproj", "{BB2DD0FA-F4E4-C293-5551-4AB72C2D47DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trunic-Editor", "trunic-Editor.csproj", "{2A5FC143-9CE9-93F6-219E-4E6F348166BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CBF994F5-0760-F741-D2E5-A6FDF1B0181B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBF994F5-0760-F741-D2E5-A6FDF1B0181B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBF994F5-0760-F741-D2E5-A6FDF1B0181B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBF994F5-0760-F741-D2E5-A6FDF1B0181B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB2DD0FA-F4E4-C293-5551-4AB72C2D47DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB2DD0FA-F4E4-C293-5551-4AB72C2D47DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB2DD0FA-F4E4-C293-5551-4AB72C2D47DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB2DD0FA-F4E4-C293-5551-4AB72C2D47DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDDE1FD-91F8-9296-B619-2D68F85EACB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDDE1FD-91F8-9296-B619-2D68F85EACB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDDE1FD-91F8-9296-B619-2D68F85EACB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDDE1FD-91F8-9296-B619-2D68F85EACB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5FC143-9CE9-93F6-219E-4E6F348166BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5FC143-9CE9-93F6-219E-4E6F348166BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5FC143-9CE9-93F6-219E-4E6F348166BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5FC143-9CE9-93F6-219E-4E6F348166BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+{
+  "name": "trunic-Editor",
+  "references": [
+    "trunic"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}
