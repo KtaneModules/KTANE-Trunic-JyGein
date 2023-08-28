@@ -108,10 +108,12 @@ public class Trunic : MonoBehaviour {
     } 
 
     void buttonPress(int Number) {
+        KMSelectable self = ButtonSelectables[Number];
+        self.AddInteractionPunch();
+        Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, self.transform);
         if(ModuleSolved) {
             return;
         }
-        KMSelectable self = ButtonSelectables[Number];
         Log($"Pressing {(Number+1).ToString()}.");
         if(Number == SolButton) {
             if(Stage == 3) {
